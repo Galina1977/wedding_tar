@@ -1,0 +1,85 @@
+// Уникальные  классы
+
+// Иконки в ui
+._icon {
+   display: block;
+   color: #464646;
+   position: relative;
+   transition: color 0.3s ease 0s;
+   &:hover {
+      color: #d59d40;
+   }
+}
+
+// Картинка
+._ibg {
+   position: relative;
+   img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: center;
+   }
+}
+
+// Кнопка
+._btn {
+   display: inline-block;
+   text-align: center;
+   @include adaptiv-value("min-height", 60, 33, 1);
+   @extend%baskerville-400;
+   font-style: italic;
+   @include adaptiv-value("font-size", 35, 15, 1);
+   line-height: 47/35 * 100%;
+   color: #fff;
+   text-transform: uppercase;
+   @include adaptiv-value("padding-top", 5, 5, 1);
+   @include adaptiv-value("padding-bottom", 5, 5, 1);
+   padding-left: 80px;
+   padding-right: 80px;
+   border-radius: 5px;
+   background: #d59d40;
+   transition: background 0.4s, color 0.4s;
+   filter: drop-shadow(-10px 0px 16px rgba(0, 0, 0, 0.2));
+   @media (any-hover: hover) {
+      &:hover {
+         background: #fbf5ec;
+         color: #464646;
+      }
+   }
+}
+
+// Заголовок
+._title {
+   display: block;
+   @include adaptiv-value("font-size", 40, 20, 1);
+   line-height: 45/40 * 100%;
+   font-weight: 700;
+   color: #29282d;
+   text-transform: uppercase;
+}
+
+// Липкая кнопка
+.upbtn {
+   opacity: 0.8;
+   z-index: 10;
+   @include adaptiv-value("width", 60, 45, 1);
+   @include adaptiv-value("height", 60, 45, 1);
+   position: fixed;
+   bottom: -80px;
+   right: 20px;
+   cursor: pointer;
+   border: 3px solid #000;
+   transition: all 0.7s ease-in-out;
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-color: #fff;
+   background-image: url("../images/icons/arrow-scroll.svg");
+   &:hover {
+      opacity: 1;
+      background-color: #d59d40;
+   }
+}

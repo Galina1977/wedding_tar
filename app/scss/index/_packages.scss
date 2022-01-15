@@ -1,0 +1,86 @@
+.packages {
+   @include adaptiv-value("padding-bottom", 58, 50, 1);
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      text-align: center;
+      @include adaptiv-value("padding-top", 39, 39, 1);
+      @include adaptiv-value("min-height", 471, 150, 1);
+   }
+   &__content {
+      max-width: 425px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(209, 206, 206, 0.7);
+      @include adaptiv-value("padding-top", 94, 50, 1);
+      @include adaptiv-value("padding-right", 5, 5, 1);
+      @include adaptiv-value("padding-bottom", 79, 70, 1);
+      @include adaptiv-value("padding-left", 5, 5, 1);
+      position: relative;
+      z-index: 2;
+      margin-bottom: -58px;
+   }
+   &__title {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 80, 50, 1);
+      line-height: 80/80 * 100%;
+      color: #fff;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin: 0 0 10px 0;
+      }
+   }
+   &__subtitle {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 25, 16, 1);
+      line-height: 28/25 * 100%;
+      letter-spacing: 2px;
+      color: #000;
+      text-transform: uppercase;
+      padding-bottom: 8px;
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         display: block;
+         @include adaptiv-value("width", 448, 252, 1);
+         height: 4px;
+         background-color: #d59d40;
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         transform: translate(-50%);
+      }
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 21, 10, 1);
+      }
+   }
+   &__text {
+      display: block;
+      max-width: 320px;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 24, 16, 1);
+      line-height: 25/24 * 100%;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 60, 35, 1);
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .packages {
+      &__inner {
+         background-position: left;
+      }
+   }
+}

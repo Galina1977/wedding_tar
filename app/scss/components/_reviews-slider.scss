@@ -1,0 +1,125 @@
+.reviews-slider {
+   width: 1173px;
+   .slick-center .reviews-slider__item {
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         display: block;
+         width: 2px;
+         height: 724px;
+         background-color: #d59d40;
+         position: absolute;
+         top: 0;
+      }
+      &::before {
+         left: 0;
+      }
+      &::after {
+         right: 0;
+      }
+   }
+   .slick-prev,
+   .slick-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      path {
+         fill: #d59d40;
+      }
+   }
+   .slick-disabled {
+      path {
+         fill: #bebebe;
+      }
+   }
+   .slick-next {
+      right: -15px;
+   }
+   .slick-prev {
+      left: -15px;
+   }
+   &__item {
+      @include adaptiv-value("padding-top", 110, 70, 1);
+      @include adaptiv-value("padding-right", 34, 15, 1);
+      @include adaptiv-value("padding-bottom", 110, 30, 1);
+      @include adaptiv-value("padding-left", 34, 15, 1);
+      cursor: pointer;
+   }
+   &__title {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 30, 25, 1);
+      line-height: 34/30 * 100%;
+      color: #d59d40;
+      &:not(:last-child) {
+         margin: 0 0 5px 0;
+      }
+   }
+   &__subtitle {
+      display: block;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 24, 20, 1);
+      line-height: 26/24 * 100%;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 34, 15, 1);
+      }
+   }
+   &__text {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 22, 18, 1);
+      line-height: 24/22 * 100%;
+      color: #000;
+   }
+}
+
+@media (max-width: 1200px) {
+   .reviews-slider {
+      width: 100%;
+      .slick-center .reviews-slider__item {
+         &::after {
+            display: none;
+         }
+      }
+      .slick-dots {
+         display: flex;
+         justify-content: center;
+      }
+      .slick-dots button {
+         padding: 0;
+         font-size: 0;
+         @include adaptiv-value("width", 13, 10, 1);
+         @include adaptiv-value("height", 13, 10, 1);
+         border: 2px solid #ccc;
+         border-radius: 50%;
+         background-color: #fff;
+         transition: color 0.4s;
+      }
+      .slick-dots li + li {
+         @include adaptiv-value("margin-left", 10, 5, 1);
+      }
+      .slick-dots .slick-active button {
+         background-color: #d59d40;
+         border: 2px solid #d59d40;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .reviews-slider {
+      .slick-center .reviews-slider__item {
+         &::before {
+            display: none;
+         }
+      }
+   }
+}

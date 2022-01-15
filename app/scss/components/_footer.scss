@@ -1,0 +1,92 @@
+.footer {
+   &__top {
+      @include adaptiv-value("padding-top", 92, 70, 1);
+      @include adaptiv-value("padding-bottom", 88, 50, 1);
+      background: #f9f4ec;
+   }
+   &__inner {
+      display: flex;
+      @include adaptiv-value("gap", 180, 65, 1);
+      @media (max-width: 1200px) {
+         flex-direction: column;
+      }
+   }
+   &__column {
+      display: flex;
+      flex-direction: column;
+      flex: 0 1 50%;
+      @media (max-width: 767.98px) {
+         flex: 0 1 100%;
+      }
+   }
+   &__title {
+      display: block;
+      @extend%roboto-500;
+      @include adaptiv-value("font-size", 37, 25, 1);
+      line-height: 50/37 * 100%;
+      color: #d59d40;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 30, 15, 1);
+      }
+   }
+   &__menu {
+      display: flex;
+      align-items: center;
+      @media (max-width: 767.98px) {
+         display: block;
+      }
+   }
+   ul.footer__list {
+      &:not(:last-child) {
+         margin-right: 40px;
+      }
+      @media (max-width: 767.98px) {
+         &:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 10px;
+         }
+      }
+   }
+   &__item {
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 15, 8, 1);
+      }
+   }
+   &__link {
+      display: block;
+      @extend%roboto-500;
+      @include adaptiv-value("font-size", 21, 17, 1);
+      line-height: 28/21 * 100%;
+      color: #d59d40;
+      transition: color 0.3s ease 0s;
+      &:hover {
+         color: #2d2d2d;
+      }
+   }
+   &__bottom {
+      @include adaptiv-value("padding-top", 75, 45, 1);
+      @include adaptiv-value("padding-bottom", 95, 45, 1);
+      background-color: #fff;
+   }
+   &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+   }
+   &__copyright {
+      display: block;
+      @extend%roboto-500;
+      @include adaptiv-value("font-size", 21, 15, 1);
+      line-height: 28/21 * 100%;
+      color: #bebebe;
+      transition: color 0.3s ease 0s;
+      &:hover {
+         color: #2d2d2d;
+      }
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 15, 10, 1);
+      }
+   }
+}

@@ -1,0 +1,13 @@
+.top-bg {
+   background: #0d0a09;
+   &__inner {
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      @include adaptiv-value("min-height", 1026, 410, 1);
+      position: relative;
+      @media (max-width: 991.98px) {
+         display: none;
+      }
+   }
+}

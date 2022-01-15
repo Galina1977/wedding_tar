@@ -1,0 +1,22 @@
+.portfolio {
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      text-align: center;
+      @include adaptiv-value("min-height", 471, 195, 1);
+      @include adaptiv-value("padding-top", 50, 25, 1);
+      @include adaptiv-value("padding-bottom", 50, 12, 1);
+   }
+   &__title {
+      @extend%roboto-500;
+      @include adaptiv-value("font-size", 50, 20, 1);
+      line-height: 68/50 * 100%;
+      color: #fff;
+      text-transform: uppercase;
+   }
+}

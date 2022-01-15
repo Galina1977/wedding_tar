@@ -1,0 +1,67 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+html {
+   margin-right: 0 !important;
+   overflow: visible !important;
+}
+
+body._lock {
+   overflow: hidden;
+}
+
+body {
+   @extend%roboto-400;
+   font-size: 15px;
+   background-color: #fff;
+   color: #3a3a3a;
+   min-width: 320px;
+   overflow-x: hidden;
+}
+
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+._container {
+   max-width: 1630px;
+   padding: 0px 15px;
+   margin: 0 auto;
+}
+
+.page {
+   flex: 1 1 auto;
+}
+
+// @media (max-width: 968px) {
+//    .mobile-overflow {
+//       width: 1000px;
+//    }
+//    .tabs-wrapper {
+//       overflow-x: scroll;
+//    }
+// }
+
+// @media (max-width: 768px) {
+//    .animate__animated {
+//       transition-property: none !important;
+//       transform: none !important;
+//       animation: none !important;
+//    }
+// }

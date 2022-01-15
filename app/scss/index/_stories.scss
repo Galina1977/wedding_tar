@@ -1,0 +1,118 @@
+.stories {
+   @include adaptiv-value("padding-top", 100, 20, 1);
+   @include adaptiv-value("padding-bottom", 120, 50, 1);
+   &__box {
+      @include adaptiv-value("margin-bottom", 85, 65, 1);
+   }
+   &__title {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 90, 34, 1);
+      line-height: 125/90 * 100%;
+      color: #000;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin: 0 0 10px 0;
+      }
+   }
+   &__subtitle {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 41, 20, 1);
+      line-height: 56/41 * 100%;
+      letter-spacing: 2px;
+      color: #d59d40;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 21, 10, 1);
+      }
+   }
+   &__text {
+      display: block;
+      max-width: 1070px;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 28, 16, 1);
+      line-height: 35/28 * 100%;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 60, 35, 1);
+      }
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include adaptiv-value("padding-top", 225, 65, 1);
+      @include adaptiv-value("padding-bottom", 263, 80, 1);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+      @include adaptiv-value("height", 724, 298, 1);
+      position: relative;
+      &::before {
+         content: "";
+         display: block;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(255, 255, 255, 0.65);
+         z-index: 0;
+      }
+   }
+   &__content {
+      text-align: center;
+      position: relative;
+      z-index: 20;
+   }
+   &__name {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 41, 24, 1);
+      line-height: 56/41 * 100%;
+      color: #000;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         margin: 0 0 10px 0;
+      }
+   }
+   &__description {
+      display: block;
+      max-width: 400px;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 24, 18, 1);
+      line-height: 26/24 * 100%;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 60, 35, 1);
+      }
+   }
+   .slick-dots {
+      display: flex;
+      position: absolute;
+      top: -45px;
+      left: 50%;
+      transform: translate(-50%);
+   }
+   .slick-dots button {
+      padding: 0;
+      font-size: 0;
+      @include adaptiv-value("width", 13, 10, 1);
+      @include adaptiv-value("height", 13, 10, 1);
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: color 0.4s;
+   }
+   .slick-dots li + li {
+      @include adaptiv-value("margin-left", 10, 8, 1);
+   }
+   .slick-dots .slick-active button {
+      background-color: #d59d40;
+      border: 2px solid #d59d40;
+   }
+}

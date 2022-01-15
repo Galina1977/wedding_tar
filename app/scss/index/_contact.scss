@@ -1,0 +1,143 @@
+.contact {
+   position: relative;
+   @include adaptiv-value("padding-top", 50, 50, 1);
+   @include adaptiv-value("padding-bottom", 83, 83, 1);
+   &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 129px;
+      @media (max-width: 991.98px) {
+         gap: 0;
+      }
+   }
+   &__content {
+      @media (max-width: 991.98px) {
+         text-align: center;
+      }
+   }
+   &__title {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 170, 50, 1);
+      line-height: 170/170 * 100%;
+      color: #29282d;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 64, 15, 1);
+      }
+   }
+   &__box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @include adaptiv-value("gap", 50, 30, 1);
+      @media (max-width: 991.98px) {
+         flex-direction: column-reverse;
+         align-items: center;
+         background: rgba(240, 240, 240, 0.7);
+         @include adaptiv-value("padding-top", 40, 30, 1);
+         @include adaptiv-value("padding-right", 40, 15, 1);
+         @include adaptiv-value("padding-bottom", 60, 50, 1);
+         @include adaptiv-value("padding-left", 40, 15, 1);
+         position: relative;
+         @include adaptiv-value("margin-top", -120, -30, 1);
+         z-index: -1;
+      }
+   }
+   &__discussion {
+      max-width: 290px;
+   }
+   &__text {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 22, 18, 1);
+      line-height: 24/22 * 100%;
+      color: #29282d;
+   }
+   &__form {
+      @include adaptiv-value("margin-top", 112, 44, 1);
+   }
+   &__box-input {
+      display: flex;
+      & + & {
+         @include adaptiv-value("margin-top", 40, 20, 1);
+      }
+      @media (max-width: 991.98px) {
+         flex-direction: column;
+      }
+   }
+   &__text-input {
+      display: inline-block;
+      width: 50%;
+      @include adaptiv-value("height", 60, 44, 1);
+      padding: 0 20px;
+      @include adaptiv-value("font-size", 21, 16, 1);
+      line-height: 28/21 * 100%;
+      color: #000;
+      background: #fff;
+      border: 1px solid #d7d7d7;
+      &::placeholder {
+         color: #d1d1d1;
+      }
+      &:not(:last-child) {
+         margin-right: 113px;
+      }
+      @media (max-width: 991.98px) {
+         width: 100%;
+         & + & {
+            &:not(:last-child) {
+               margin-right: 0;
+            }
+            @include adaptiv-value("margin-top", 40, 20, 1);
+         }
+      }
+   }
+   &__textarea {
+      display: inline-block;
+      padding: 18px 20px;
+      width: 100%;
+      @include adaptiv-value("height", 204, 170, 1);
+      @include adaptiv-value("font-size", 21, 16, 1);
+      line-height: 28/21 * 100%;
+      color: #000;
+      background: #fff;
+      border: 1px solid #d7d7d7;
+      @include adaptiv-value("margin-top", 26, 26, 1);
+      &::placeholder {
+         color: #d1d1d1;
+      }
+   }
+   &__btn {
+      @include adaptiv-value("margin-top", 80, 30, 1);
+   }
+   &__images {
+      overflow: hidden;
+      @include adaptiv-value("width", 686, 427, 1);
+      @include adaptiv-value("min-height", 1113, 750, 1);
+      @media (max-width: 991.98px) {
+         position: absolute;
+         z-index: -2;
+         @include adaptiv-value("top", 337, 229, 1);
+      }
+   }
+}
+
+.address {
+   font-style: normal;
+   &__link {
+      display: flex;
+      align-items: center;
+      @extend%roboto-700;
+      @include adaptiv-value("font-size", 31, 18, 1);
+      line-height: 42/31 * 100%;
+      color: #29282d;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 40, 10, 1);
+      }
+   }
+   ._icon:before {
+      font-weight: 700;
+      @include adaptiv-value("font-size", 50, 20, 1);
+      @include adaptiv-value("margin-right", 30, 15, 1);
+   }
+}

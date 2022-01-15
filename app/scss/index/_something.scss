@@ -1,0 +1,130 @@
+.something {
+   @include adaptiv-value("padding-bottom", 205, 30, 1);
+   &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+   &__head {
+      max-width: 850px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: right;
+      position: relative;
+      @include adaptiv-value("margin-bottom", 130, 55, 1);
+      &::before,
+      &::after {
+         content: "";
+         display: block;
+         @include adaptiv-value("width", 1028, 205, 1);
+         height: 3px;
+         background-color: #d59d40;
+         position: absolute;
+      }
+      &::before {
+         top: 0;
+         left: 85px;
+      }
+      &::after {
+         bottom: 0;
+         right: 85px;
+      }
+   }
+   &__title {
+      display: block;
+      @extend%baskerville-700;
+      @include adaptiv-value("font-size", 100, 37, 1);
+      line-height: 114/100 * 100%;
+      color: #d59d40;
+      text-transform: uppercase;
+      text-align: left;
+   }
+   &__subtitle {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 90, 32, 1);
+      line-height: 90/90 * 100%;
+      letter-spacing: 2px;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 21, 10, 1);
+      }
+   }
+   &__text {
+      display: block;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 26, 16, 1);
+      line-height: 32/26 * 100%;
+      color: #000;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 30, 15, 1);
+      }
+   }
+   &__bady {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      @include adaptiv-value("gap", 168, 50, 1);
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      max-width: 640px;
+      text-align: center;
+      @media (max-width: 991.98px) {
+         max-width: 100%;
+      }
+   }
+   &__content {
+      padding: 20px 0 60px;
+      height: 100%;
+      z-index: 5;
+      position: relative;
+      &::before {
+         content: "";
+         display: block;
+         @include adaptiv-value("width", 519, 519, 1);
+         background: #f0f0f0;
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         left: 50%;
+         transform: translate(-50%);
+         z-index: -1;
+      }
+      @media (max-width: 991.98px) {
+         &::before {
+            content: "";
+            display: none;
+         }
+      }
+   }
+   &__heading {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 46, 26, 1);
+      line-height: 55/46 * 100%;
+      color: #d59d40;
+      text-transform: uppercase;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 39, 15, 1);
+      }
+   }
+   &__description {
+      display: block;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 28, 18, 1);
+      line-height: 35/28 * 100%;
+      color: #000;
+   }
+   &__btn {
+      align-self: center;
+      position: relative;
+      z-index: 5;
+      @include adaptiv-value("margin-top", -25, -25, 1);
+   }
+}

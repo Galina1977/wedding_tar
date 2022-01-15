@@ -1,0 +1,24 @@
+@import "_vars";
+@import "_fonts";
+@import "_reset";
+@import "_libs";
+@import "_global";
+// иконочные шрифты
+@import "_icons";
+// ui уникальные классы
+@import "_ui";
+
+@import "components/_header";
+@import "components/_footer";
+@import "components/_reviews-slider";
+@import "components/_slide-services";
+
+@import "index/_features";
+@import "index/_top-bg";
+@import "index/_portfolio";
+@import "index/_testimonials";
+@import "index/_packages";
+@import "index/_answer";
+@import "index/_stories";
+@import "index/_something";
+@import "index/_contact";

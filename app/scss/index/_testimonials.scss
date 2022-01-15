@@ -1,0 +1,90 @@
+.testimonials {
+   @include adaptiv-value("padding-top", 109, 50, 1);
+   @include adaptiv-value("padding-bottom", 100, 75, 1);
+   &__inner {
+      display: flex;
+   }
+   &__content {
+      padding-top: 110px;
+      margin-left: auto;
+   }
+   &__box {
+      max-width: 350px;
+      @include adaptiv-value("padding-top", 41, 30, 1);
+      @include adaptiv-value("padding-right", 34, 15, 1);
+      @include adaptiv-value("padding-bottom", 46, 30, 1);
+      @include adaptiv-value("padding-left", 34, 15, 1);
+      background: #f0f0f0;
+      text-align: center;
+   }
+   &__title {
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 33, 25, 1);
+      line-height: 43/33 * 100%;
+      color: #000;
+      text-transform: uppercase;
+      position: relative;
+      @include adaptiv-value("margin-top", -62, -45, 1);
+      margin-bottom: 5px;
+   }
+   &__subtitle {
+      display: block;
+      @extend%baskerville-400;
+      font-style: italic;
+      @include adaptiv-value("font-size", 24, 20, 1);
+      line-height: 26/24 * 100%;
+      color: #000;
+      &:not(:last-child) {
+         @include adaptiv-value("margin-bottom", 34, 15, 1);
+      }
+   }
+   &__text {
+      display: block;
+      @extend%baskerville-400;
+      @include adaptiv-value("font-size", 22, 18, 1);
+      line-height: 24/22 * 100%;
+      color: #000;
+   }
+}
+
+@media (max-width: 1580px) {
+   .testimonials {
+      &__inner {
+         flex-direction: column-reverse;
+         align-items: center;
+         justify-content: center;
+         @include adaptiv-value("gap", 20, 5, 1);
+      }
+      &__content {
+         padding-top: 45px;
+         margin-left: 0;
+         position: relative;
+         &::before {
+            content: "";
+            display: block;
+            @include adaptiv-value("width", 724, 275, 1);
+            height: 2px;
+            background-color: #d59d40;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+         }
+      }
+      &__box {
+         max-width: 100%;
+         background: transparent;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .testimonials {
+      &__box {
+         background: #f0f0f0;
+      }
+      ._container {
+         padding: 0;
+      }
+   }
+}

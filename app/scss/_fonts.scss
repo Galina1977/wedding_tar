@@ -1,0 +1,71 @@
+@font-face {
+   font-family: "Baskerville";
+   font-weight: 400;
+   font-style: normal;
+   src: local("Baskerville-Regular"), url("../fonts/Baskerville-Regular.woff2") format("woff2"),
+      url("../fonts/Baskerville-Regular.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Baskerville";
+   font-weight: 400;
+   font-style: italic;
+   src: local("Baskerville-Italic"), url("../fonts/Baskerville-Italic.woff2") format("woff2"),
+      url("../fonts/Baskerville-Italic.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Baskerville";
+   font-weight: 700;
+   font-style: normal;
+   src: local("Baskerville-Bold"), url("../fonts/Baskerville-Bold.woff2") format("woff2"),
+      url("../fonts/Baskerville-Bold.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Parisienne";
+   font-weight: 400;
+   font-style: normal;
+   src: local("Parisienne-Regular"), url("../fonts/Parisienne-Regular.woff2") format("woff2"),
+      url("../fonts/Parisienne-Regular.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-weight: 400;
+   font-style: normal;
+   src: local("Roboto-Regular"), url("../fonts/Roboto-Regular.woff2") format("woff2"),
+      url("../fonts/Roboto-Regular.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-weight: 500;
+   font-style: normal;
+   src: local("Roboto-Medium"), url("../fonts/Roboto-Medium.woff2") format("woff2"),
+      url("../fonts/Roboto-Medium.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-weight: 700;
+   font-style: normal;
+   src: local("Roboto-Bold"), url("../fonts/Roboto-Bold.woff2") format("woff2"),
+      url("../fonts/Roboto-Bold.woff") format("woff");
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Roboto";
+   font-weight: 900;
+   font-style: normal;
+   src: local("Roboto-Black"), url("../fonts/Roboto-Black.woff2") format("woff2"),
+      url("../fonts/Roboto-Black.woff") format("woff");
+   font-display: swap;
+}
